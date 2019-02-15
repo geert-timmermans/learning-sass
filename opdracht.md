@@ -1,21 +1,4 @@
-Skip to content
-
-Search…
-All gists
-Back to GitHub
-New gist
-@geert-timmermans 
-0
-0@pixelinepixeline/basic_sass_features.md
-forked from blackfalcon/basic_sass_features.md
-Created a year ago • 
- 
-<script src="https://gist.github.com/pixeline/dab8a29566b994453b8c681ed2b7ff2a.js"></script>
-  
- Code  Revisions 1
-Exercises in basic Sass features
- basic_sass_features.md
-Sass is a powerhouse language that is adding new features all the time. For this introduction we will go over the basics of the language and see how they all tie together. We will discuss nesting, parent selector definitions, variables, Sass math, @extends, and @mixins.
+﻿Sass is a powerhouse language that is adding new features all the time. For this introduction we will go over the basics of the language and see how they all tie together. We will discuss nesting, parent selector definitions, variables, Sass math, @extends, and @mixins.
 
 Code comments
 Commenting your code is the number one awesome thing any developer can do. In CSS you can place comments in your code /* */, but this will appear in the actual CSS and sometimes you don't want or need all that stuff to be there.
@@ -349,28 +332,3 @@ The real strength of Mixins is their ability to create really intelligent and re
 
 Sass in summary
 As you hopefully have seen in this review, Sass has some small hurdles to overcome but the basics are achievable. Starting out with simple concepts like nesting, parent selector definitions and variables will amount to a whole lot of WIN. Then working your way up to Sass math, @extends and @mixins you will soon be a Sass Master.
-
-Want to learn more?
-SpeakerDeck
-CodeRecipez
- @geert-timmermans
-   
- 
- 
-Leave a comment
-Attach files by dragging & dropping, selecting them, or pasting from the clipboard.
-
- Styling with Markdown is supported
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Press h to open a hovercard with more details.
