@@ -1,0 +1,133 @@
+@import "variabel.scss";
+
+/* Code comments */
+
+/* commentaar css style
+   deze commentaar wordt mee overgenomen naar css
+*/
+
+//commentaar scss style
+//deze commentaar is enkel voor scss
+
+* {
+  font-size: (12/16) * 1em;
+}
+
+/* Nesting your selectors */
+
+body {
+  background: darkslategrey;
+  text-align: center;
+  p {
+    color: lime;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+/* Nested properties */
+
+body {
+  font: {
+    family: arial;
+    weight: bold;
+    size: 2em;
+  }
+}
+
+/* Redefining the parent selector w/nested selectors */
+//Using the nesting function of Sass we can extend the parent a tag by simply using the & reserved symbol.
+
+a {
+  color: blue;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.nested-selectors {
+  background: orange;
+  & .block {
+    border: 1px solid white;
+  }
+}
+
+.bgc {
+  height: 50px;
+  .cssgradients & {
+    background: -webkit-linear-gradient(
+      top,
+      #c9de96 0%,
+      #8ab66b 44%,
+      #398235 100%
+    );
+    background: -moz-linear-gradient(
+      top,
+      #c9de96 0%,
+      #8ab66b 44%,
+      #398235 100%
+    );
+    background: linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  }
+  .no-cssgradients & {
+    background: #cfcfcf;
+  }
+}
+
+/* Using variables */
+// variabelen staan in een andere file, in deze oef variabel.scss
+// deze wordt bovenaan deze pagina geimporteerd
+
+.box {
+  margin-top: 1em;
+  border: 1px solid $border-color;
+}
+
+/* Sass math */
+html {
+  font-size: (12 / 16) * 1em;
+}
+html {
+  font-size: (12 / 16) * 100%;
+}
+
+/* Extending classes */
+
+.user-dialog-box {
+  border: 10px solid $standard-border-color;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  background-color: #000;
+  color: whitesmoke;
+}
+
+// Semantic class used in the DOM
+.alert-winning-user {
+  @extend .user-dialog-box;
+  border-color: $winning-border-color;
+}
+
+
+
+/* oef */
+
+// Our reusable default silent class
+%standard-dialog-box2 {
+  border: 10px solid $standard-border-color;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+
+// Semantic class used in the DOM
+.user-notification2 {
+  @extend %standard-dialog-box2;
+}
+
+// Semantic class used in the DOM
+.alert-winning-user2 {
+  @extend .user-notification2;
+  border-color: $winning-border-color;
+}
