@@ -1,4 +1,4 @@
-@import "variabel.scss";
+@import "_variabel.scss";
 
 /* Code comments */
 
@@ -93,6 +93,7 @@ html {
 }
 
 /* Extending classes */
+//@extend wordt gebruikt om bovenliggende klasse over te nemen
 
 .user-dialog-box {
   border: 10px solid $standard-border-color;
@@ -131,3 +132,18 @@ html {
   @extend .user-notification2;
   border-color: $winning-border-color;
 }
+
+
+/* Mixins */
+//Mixins wordt opgeroepen met @include. deze kan ook hoger in het document staan
+@mixin dialog-box3($border-color) {
+  border: 10px solid $border-color;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  margin-top: 20px;
+}
+
+.alert-winning-user3 {
+  @include dialog-box3($border-color);
+}
+
